@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                document.querySelector("form").onsubmit = function() {
+                    let a = document.querySelector('#abc').value;
+                    alert(`Hello ${a}`);
+                    };
+            });
+        </script>
+        <style>
+            #aaa{
+                width: 200px;
+                height: 50px;
+                border-radius: 25px;
+                background-color: #45a045;
+                border-color: black;
+                border-width: 2px;
+            }
+            #aaa{
+                color: ghostwhite;
+            }
+            #aaa:hover{
+                background-color: ghostwhite;
+                color: black;
+            }
+            nav{
+                text-align: right;
+                word-spacing: 50px;
+                background-color: #aaa;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            a:hover{
+                color: blue;
+                text-decoration-line: underline;
+            }
+            #s2{
+                font-size: 30px;
+                position: absolute;
+                font: bolder;
+                font-weight: 700;
+                left: 180px;
+                top: 221px;
+            }
+            #s1{
+                position: absolute;
+                font-size: 30px;
+                font: bolder;
+                font-weight: 700;
+                top: 191px;
+                left: 200px;
+            }
+            #m2{
+                position: absolute;
+                font-size: 30px;
+                font: bolder;
+                font-weight: 700;
+                top: 221px;
+                left: 30px;
+            }
+            #m1{
+                font-size: 30px;
+                font: bolder;
+                font-weight: 700;
+            }
+            #sec{
+                position: absolute;
+                font-size: 30px;
+                font: bolder;
+                font-weight: 700;
+                top: 191px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello</h1>
+        <button id="aaa" onclick="hello()">Click</button>
+        <script>
+            function hello(){
+                let a = document.querySelector('h1')
+                if (a.innerHTML ==="Hello"){
+                    a.innerHTML = "World!"
+                }
+                else {
+                    a.innerHTML = "Hello"
+                }
+            }
+        </script>
+        <form>
+            <input id="abc" autocomplete="on" type="text">
+            <input id="b" type="submit">
+        </form>
+        <p id="h1"></p><p id="h2"></p>
+        <p id="m1"></p><p id="m2"></p>
+        <p id="s1"></p><code id="s2"></code>
+        <p id="sec">Seconds : </p>
+    </body>
+</html>
